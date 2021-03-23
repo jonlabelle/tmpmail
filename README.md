@@ -97,7 +97,5 @@ tmpmail --text <email_id>
 tmpmail --browser <browser> <email_id>
 ```
 
-> More examples at <https://jonlabelle.com/snippets/view/shell/tmpmail-command>.
-
 [tmpmail]: https://github.com/sdushantha/tmpmail
 [1secmail API]: https://www.1secmail.com/api/
