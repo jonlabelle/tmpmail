@@ -9,16 +9,6 @@ readonly SCRIPTNAME=$(basename "${0}")
 SOURCE_PATH="${SCRIPTSDIR}/bin/tmpmail.sh"
 INSTALL_PATH=~/bin/tmpmail
 
-update_tmpmail() {
-    if [[ -f "${SOURCE_PATH}" ]]; then
-        echo "> Removing previous version '$SOURCE_PATH'"
-        rm -f "${SOURCE_PATH}"
-    fi
-
-    echo "> Downloading latest 'sdushantha/tmpmail' version from GitHub"
-    curl "https://raw.githubusercontent.com/sdushantha/tmpmail/master/tmpmail" -o "${SOURCE_PATH}"
-}
-
 usage() {
     echo
     echo "Usage: ${SCRIPTNAME} <install_option>"
@@ -31,6 +21,16 @@ usage() {
     echo "  -u, --uninstall   to uninstall/remove '${INSTALL_PATH}'"
     echo "  -h, --help        show this message and exit"
     echo
+}
+
+update_tmpmail() {
+    if [[ -f "${SOURCE_PATH}" ]]; then
+        echo "> Removing previous version '$SOURCE_PATH'"
+        rm -f "${SOURCE_PATH}"
+    fi
+
+    echo "> Downloading latest 'sdushantha/tmpmail' version from GitHub"
+    curl "https://raw.githubusercontent.com/sdushantha/tmpmail/master/tmpmail" -o "${SOURCE_PATH}"
 }
 
 ensure_install_path() {
