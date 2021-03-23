@@ -1,5 +1,7 @@
 # tmpmail
 
+[![lint](https://github.com/jonlabelle/tmpmail/actions/workflows/lint.yml/badge.svg)](https://github.com/jonlabelle/tmpmail/actions/workflows/lint.yml)
+
 > *Temporary email from the terminal.*
 
 ## What does it do?
