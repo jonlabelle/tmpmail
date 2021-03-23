@@ -1,0 +1,27 @@
+name: lint
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - "*.md"
+      - ".editorconfig"
+
+  pull_request:
+    branches: [master]
+    paths-ignore:
+      - "*.md"
+      - ".editorconfig"
+
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Git repository
+        uses: actions/checkout@v2
+
+      - name: Run Shellcheck
+        uses: azohra/shell-linter@latest
