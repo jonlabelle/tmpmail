@@ -6,8 +6,8 @@ set -e
 readonly SCRIPTSDIR="$(cd "$(dirname "${0}")"; echo "$(pwd)")"
 readonly SCRIPTNAME=$(basename "${0}")
 
-SOURCE_PATH="${SCRIPTSDIR}/bin/tmpmail.sh"
-INSTALL_PATH=~/bin/tmpmail
+readonly SOURCE_PATH="${SCRIPTSDIR}/bin/tmpmail.sh"
+readonly INSTALL_PATH=~/bin/tmpmail
 
 usage() {
     echo
@@ -59,12 +59,12 @@ uninstall() {
 
 install() {
     echo "> Creating symlink '$SOURCE_PATH' -> '$INSTALL_PATH'"
-    ln -s "$SOURCE_PATH" $INSTALL_PATH
+    ln -s "$SOURCE_PATH" "$INSTALL_PATH"
 }
 
 make_executable() {
     echo "> Making '$INSTALL_PATH' executable"
-    chmod +x $INSTALL_PATH
+    chmod +x "$INSTALL_PATH"
 }
 
 main() {
