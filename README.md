@@ -20,7 +20,7 @@ the terminal. It's a command-line utility written in POSIX sh and uses the
 
 ### Downloading
 
-First, you'll need to clone [this repository](https://github.com/jonlabelle/tmpmail):
+First, you'll need to clone [this repository](https://github.com/jonlabelle/tmpmail) or [download the zip](https://github.com/jonlabelle/tmpmail/archive/refs/heads/master.zip).
 
 ```bash
 git clone https://github.com/jonlabelle/tmpmail.git
